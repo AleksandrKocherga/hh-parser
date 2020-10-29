@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+.vh100{
+  min-height: 100vh;
+}
+.w800{
+  width: 800px!important;
+  margin: auto;
+}
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items:center
+}
+
+.signin-signup {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+form.sign-in-form {
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  position: relative;
+}
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  border-radius: 55px;
+  height: 55px;
+  width: 100%;
+  background-color: #f0f0f0;
+  text-indent: 20px
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.btn {
+  min-width: 162px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #4d84e2;
+}
+
+
+header .wrapper{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center
+}
+.header-item {
+  display: flex;
+}
+.header-item a{
+  text-decoration: none;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-item_btn a, .header-item_logout a{
+  margin-right:20px ;
+}
+
+.header-item .logo{
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #5995fd
+}
+
+
+
+/* main */
+.search-main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.form-control {
+	position: relative;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  
+}
+
+.form-control input {
+	border: 0;
+	border-bottom: 2px solid #333;
+	padding: 15px 0;
+	display: block;
+	font-size: 18px;
+	font-family: 'Muli', sans-serif;
+	margin: 15px auto;
+	transition: 0.1s ease-in;
+}
+
+.form-control input:focus, 
+.form-control input:valid {
+	border-bottom-color: #5995fd;
+	outline: none;
+}
+
+.form-control input:focus + label span ,
+.form-control input:valid + label span{
+	color: #5995fd;
+	transform: translateY(-30px);
+}
+
+.form-control .input-main{
+  width: 100%;
+}
+.form-control input[name='searchText'] {
+width: 100%;
+}
+.form-control label {
+	position: absolute;
+	top: 30px;
+}
+
+.form-control label span {
+	display: inline-block;
+	font-size: 20px;
+	min-width: 5px;
+	transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.average {
+  width: 800px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+.average-stack, .average-salary{
+  width: 50%;
+}
+.average h2 {
+  color: #444;
+  margin-bottom: 25px;
+}
+.average .average-stack h2 {
+text-align: center;
+}
+.average-stack-inner{
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.average-salary-inner {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #444;
+  line-height: 1;
+}
+.average-stack-inner .item{
+  display: inline-block;
+  padding: 3px 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius:10px;
+  min-width:60px;
+  text-align: center;
+  background: #5995fd59;
+}
+
+.vacancy{
+  width: 800px;
+  margin: auto;
+}
+.vacancy-item {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  padding: 15px;
+  box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.1), 0 0.33rem 1rem rgba(0,0,0,0.1);
+}
+.vacancy-item_img, .block-salary {
+  display: flex;
+  align-items:top;
+  justify-content: center;
+}
+.vacancy-item_img img{
+  width: 150px;
+  object-fit: contain;
+}
+.vacancy-item_block{
+  flex-grow: 1;
+  padding-left: 15px;
+}
+.block-salary{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.block-stack .item{
+  display: inline-block;
+  font-size: 0.6rem;
+  padding: 3px 6px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  border-radius:10px;
+  min-width:50px;
+  text-align: center;
+  background: #5995fd59;
+}

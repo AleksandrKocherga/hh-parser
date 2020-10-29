@@ -1,7 +1,8 @@
 const form = document.getElementsByName("registrationForm")[0];
 
-form.addEventListener("submit", async (event) => {
 
+
+form.addEventListener("submit", async (event) => {
   // let {action, method, registrationName, registrationEmail, registrationPassword} = event.target;
 
   // console.log(action, method, registrationName, registrationEmail, registrationPassword);
@@ -33,9 +34,8 @@ form.addEventListener("submit", async (event) => {
     .catch((error) => {
       console.log("Request failed", error);
     });
-  event.target.registrationName.value = "";
-  event.target.registrationPassword.value = "";
-  event.target.registrationEmail.value = "";
 
-  window.location.href = '/main'
+  window.location.href = "/main";
 });
+
+

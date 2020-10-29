@@ -1,14 +1,31 @@
 const User = require("../models/User.js");
 const router = require("express").Router();
 
-router.get("/login", (req, res) => {
-  res.render("login", { title: "Логин" });
+// router.get("/login", (req, res) => {
+//   res.render("login", { title: "Логин" });
+// });
+//
+router.post("/login", async (req, res) => {
+  const { loginName, loginPassword } = req.body;
+  const user = await User.findOne({ name: loginName });
+
+  if (user && user.password === loginPassword) {
+    req.session.user = user;
+    res.redirect("/main");
+  } else {
+    res.redirect("/");
+  }
 });
 
 router.get("/main", (req, res) => {
-  res.render("main", { title: "Парсер" });
+  if (req.session.user) res.render("main", { title: "Парсер" });
+  else res.redirect("/");
 });
 
+router.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
+});
 router.get("/", (req, res) => {
   res.render("registration", { title: "Регистрация" });
 });
@@ -22,9 +39,27 @@ router.post("/registration", async (req, res) => {
     status: req.body.admin,
   });
   await user.save();
+  req.session.user = user;
   // res.redirect("/main");
   res.json({ status: "Успешно!" });
 });
+// router.use((req, res, next) => {
+//   next({
+//     status: 404,
+//     message: "Not Found",
+//   });
+// });
 
-router.post("/login", async (req, res) => {});
+// router.use((err, req, res, next) => {
+//   if (err.status === 404) {
+//     return res.status(400).send("404");
+//   }
+
+//   if (err.status === 500) {
+//     return res.status(500).send("500");
+//   }
+
+//   next();
+// });
+
 module.exports = router;
