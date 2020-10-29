@@ -11,4 +11,3 @@ labels.forEach((label) => {
     )
     .join("");
 });
-console.log("labels");
