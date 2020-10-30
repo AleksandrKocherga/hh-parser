@@ -1,13 +1,11 @@
 const form = document.getElementsByName("registrationForm")[0];
 
+
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const rigist = document.querySelector(".rigist");
 
 form.addEventListener("submit", async (event) => {
-  // let {action, method, registrationName, registrationEmail, registrationPassword} = event.target;
-
-  // console.log(action, method, registrationName, registrationEmail, registrationPassword);
 
   event.preventDefault();
 
@@ -50,6 +48,3 @@ sign_in_btn.addEventListener("click", () => {
   rigist.classList.remove("sign-up-mode");
 });
 
-console.log(sign_up_btn);
-console.log(sign_in_btn);
-console.log(rigist);
