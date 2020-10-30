@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const Vacancy = require('./bdSchima');
+const Vacancy = require('../models/Vacancy');
 
-
-mongoose.connect('mongodb://localhost/hui', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost/hui', {useNewUrlParser: true});
 
 
 const allSkills = [];
