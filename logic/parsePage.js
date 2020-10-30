@@ -1,7 +1,8 @@
 const cheerio = require('cheerio');
 const request = require('request');
 const mongoose = require('mongoose');
-const Vacancy = require('./bdSchima');
+const Vacancy = require('../models/Vacancy');
+
 mongoose.connect('mongodb://localhost/hui', {useNewUrlParser: true});
 
 const links = [];
@@ -61,4 +62,4 @@ function req(i, links, newArray) {
  }));
 }
 
-module.exports = {parse, pagintor};
+module.exports = {parse};

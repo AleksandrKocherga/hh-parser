@@ -7,12 +7,13 @@ module.exports = function (app) {
   const mongoose = require("mongoose");
   const path = require("path");
   const searchRoute = require("../routes/search.js");
+  const updateBaseRoute = require('../routes/updateBase')
   const registrationRoute = require("../routes/auth.js");
 
-  mongoose.connect("mongodb://localhost:27017/HH", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  // mongoose.connect("mongodb://localhost:27017/hui", {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,
+  // });
 
   app.set("view engine", "hbs");
   app.set("views", path.join(__dirname, "..", "views"));
@@ -41,4 +42,5 @@ module.exports = function (app) {
 
   app.use("/", registrationRoute);
   app.use("/search", searchRoute);
+  app.use("/updateBase", updateBaseRoute);
 };
