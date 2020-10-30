@@ -1,12 +1,11 @@
 const form = document.getElementsByName("registrationForm")[0];
 
-
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const rigist = document.querySelector(".rigist");
 
-form.addEventListener("submit", async (event) => {
 
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   let name = event.target.registrationName.value;
@@ -38,7 +37,6 @@ form.addEventListener("submit", async (event) => {
   window.location.href = "/main";
 });
 
-
 // круг
 sign_up_btn.addEventListener("click", () => {
   rigist.classList.add("sign-up-mode");
@@ -48,3 +46,4 @@ sign_in_btn.addEventListener("click", () => {
   rigist.classList.remove("sign-up-mode");
 });
 
+// adminform

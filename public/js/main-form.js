@@ -2,6 +2,13 @@ const inputs = document.querySelectorAll(".form-control input");
 const labels = document.querySelectorAll(".form-control label");
 const formSearch = document.getElementsByName("searchForm")[0];
 
+const adminText = document.getElementsByName("adminText");
+const adminBtn = document.getElementsByName("adminBtn");
+
+adminBtn.addEventListener("click", () => {
+  adminText.classList.toogle("activ");
+});
+
 labels.forEach((label) => {
   label.innerHTML = label.innerText
     .split("")

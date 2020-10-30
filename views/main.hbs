@@ -6,7 +6,12 @@
     </div>
 
     <div class="header-item">
-      <div class="header-item_btn"><a href="/update-base" class="btn">Обновить базу</a></div>
+      <div class="header-form">
+        <form action="/updateBase">
+          <input type="text" name="adminText" class="header-form-text">
+          <input type="submit" value="спарсить" name="adminBtn" class="btn">
+        </form>
+      </div>
       <div class="header-item_logout"><a href="/logout" class="btn">Выйти</a></div>
 
     </div>
