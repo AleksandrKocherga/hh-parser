@@ -6,6 +6,7 @@ module.exports = function (app) {
   const morgan = require("morgan");
   const mongoose = require("mongoose");
   const path = require("path");
+  const searchRoute = require("../routes/search.js");
   const registrationRoute = require("../routes/auth.js");
 
   mongoose.connect("mongodb://localhost:27017/HH", {
@@ -39,4 +40,5 @@ module.exports = function (app) {
   );
 
   app.use("/", registrationRoute);
+  app.use("/search", searchRoute);
 };

@@ -16,7 +16,7 @@
 
 <section class="container">
   <div class="search-main">
-    <form class="form-control" name="searchForm" method="POST" action="search">
+    <form class="form-control" name="searchForm" method="GET" action="/search">
       <div class="input-main">
         <input type="text" name="searchText" required />
         <label>Поиск вакансий</label>
@@ -26,7 +26,7 @@
 </section>
 
 <section class="container" style="display: none;">
-
+  {{list}}
   <div class="average">
     <div class="average-salary">
       <h2>Средняя зарплата</h2>
