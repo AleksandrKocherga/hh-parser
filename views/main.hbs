@@ -1,23 +1,88 @@
-<header>
+<header class="container">
   <div class="wrapper">
 
     <div class="header-item">
-      <div class="logo">Logo</div>
+      <a href="#" class="logo">Logo</a>
     </div>
 
     <div class="header-item">
-      <div class="header-item_btn"><a href="/update-base">Обновить базу</a></div>
-      <div class="header-item_logout"><a href="/logout">Выйти</a></div>
+      <div class="header-item_btn"><a href="/update-base" class="btn">Обновить базу</a></div>
+      <div class="header-item_logout"><a href="/logout" class="btn">Выйти</a></div>
 
     </div>
 
   </div>
 </header>
-<h1>Супер парсер тут</h1>
-<section>
-  <form class="form-control" name="searchForm" method="POST" action="search">
-    <input type="text" name="searchText" required />
-    <label>Поиск вакансий</label>
-    <input type="submit" value="ИСКАТЬ" name="searchBtn">
-  </form>
+
+<section class="container">
+  <div class="search-main">
+    <form class="form-control" name="searchForm" method="POST" action="search">
+      <div class="input-main">
+        <input type="text" name="searchText" required />
+        <label>Поиск вакансий</label>
+        <input type="submit" value="ИСКАТЬ" name="searchBtn" class="btn">
+    </form>
+  </div>
+</section>
+
+<section class="container" style="display: none;">
+
+  <div class="average">
+    <div class="average-salary">
+      <h2>Средняя зарплата</h2>
+      <div class="average-salary-inner"> 70 000 ₽</div>
+    </div>
+
+    <div class="average-stack">
+      <h2 class="average-stack-title">Необходимые технологии</h2>
+      <div class="average-stack-inner">
+        <span class="item">React</span>
+        <span class="item">Vue</span>
+        <span class="item">JS</span>
+        <span class="item">HTML</span>
+        <span class="item">CSS</span>
+        <span class="item">React</span>
+        <span class="item">Vue</span>
+        <span class="item">JS</span>
+        <span class="item">HTML</span>
+        <span class="item">CSS</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="container" style="display: none;">
+  <div class="vacancy">
+    <div class="vacancy-item">
+      <div class="vacancy-item_img"><img src="https://hhcdn.ru/employer-logo/1427354.png"></div>
+      <div class="vacancy-item_block">
+        <div class="block-title">Frontend Разработчик (React / Node.js)</div>
+        <div class="block-company">Lincoln Labs </div>
+        <div class="block-stack">
+          <span class="item">React</span>
+          <span class="item">React</span>
+          <span class="item">React</span>
+          <span class="item">React</span>
+        </div>
+      </div>
+      <div class="block-salary">70 000 P</div>
+    </div>
+
+    <div class="vacancy-item">
+      <div class="vacancy-item_img"><img src="https://hhcdn.ru/employer-logo/1427354.png"></div>
+      <div class="vacancy-item_block">
+        <div class="block-title">Frontend Разработчик (React / Node.js)</div>
+        <div class="block-company">Lincoln Labs </div>
+        <div class="block-stack">
+          <span class="item">React</span>
+          <span class="item">React</span>
+          <span class="item">React</span>
+          <span class="item">React</span>
+        </div>
+      </div>
+      <div class="block-salary">70 000 P</div>
+    </div>
+
+  </div>
 </section>

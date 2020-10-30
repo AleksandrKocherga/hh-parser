@@ -1,7 +1,10 @@
 const form = document.getElementsByName("registrationForm")[0];
 
-form.addEventListener("submit", async (event) => {
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const rigist = document.querySelector(".rigist");
 
+form.addEventListener("submit", async (event) => {
   // let {action, method, registrationName, registrationEmail, registrationPassword} = event.target;
 
   // console.log(action, method, registrationName, registrationEmail, registrationPassword);
@@ -33,9 +36,20 @@ form.addEventListener("submit", async (event) => {
     .catch((error) => {
       console.log("Request failed", error);
     });
-  event.target.registrationName.value = "";
-  event.target.registrationPassword.value = "";
-  event.target.registrationEmail.value = "";
 
-  window.location.href = '/main'
+  window.location.href = "/main";
 });
+
+
+// круг
+sign_up_btn.addEventListener("click", () => {
+  rigist.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+  rigist.classList.remove("sign-up-mode");
+});
+
+console.log(sign_up_btn);
+console.log(sign_in_btn);
+console.log(rigist);

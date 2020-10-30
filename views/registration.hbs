@@ -1,13 +1,50 @@
-<form action="/registration" name="registrationForm" method="POST">
-  <input type="text" name="registrationName" placeholder="Ник"><br>
-  <input type="email" name="registrationEmail" placeholder="Почта"><br>
-  <input type="password" name="registrationPassword" placeholder="Пароль"><br>
-  <input type="checkbox" name="admin">
-  <input type="submit" value="Жмяк">
-</form>
+<section class="container vh100 rigist">
+  <div class="forms-container">
+    <form action="/registration" name="registrationForm" method="POST" class="  ">
+      <h2 class="title">Регистрация</h2>
 
-<form action="/login" name="loginForm" method="POST">
-  <input type="text" name="loginName" placeholder="Ник"><br>
-  <input type="password" name="loginPassword" placeholder="Пароль"><br>
-  <input type="submit" value="Кнопка">
-</form>
+      <div class="input-field">
+        <input type="text" name="registrationName" placeholder="Ник">
+      </div>
+
+      <div class="input-field">
+        <input type="email" name="registrationEmail" placeholder="Почта">
+      </div>
+
+      <div class="input-field">
+        <input type="password" name="registrationPassword" placeholder="Пароль">
+      </div>
+      <input type="checkbox" name="admin" style="display: none;">
+      <input type="submit" value="Зарегаться" class="btn solid">
+    </form>
+
+    <form action="/login" name="loginForm" method="POST" class="sign-in-form">
+      <h2 class="title">Войти</h2>
+      <div class="input-field"><input type="text" name="loginName" placeholder="Ник"></div>
+      <div class="input-field"><input type="password" name="loginPassword" placeholder="Пароль"></div>
+      <input type="submit" value="Войти" class="btn solid">
+    </form>
+  </div>
+
+   <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Новичок?</h3>
+            <button class="btn transparent" id="sign-up-btn">
+              Регистрация
+            </button>
+          </div>
+          <img src="img/regist.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Уже регался?</h3>
+            <button class="btn transparent" id="sign-in-btn">
+              Войти
+            </button>
+          </div>
+          <img src="img/login.svg" class="image" alt="" />
+        </div>
+      </div>
+
+</section>
