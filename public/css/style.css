@@ -152,6 +152,29 @@ header .wrapper{
   color: #5995fd
 }
 
+.header-form form{
+  padding-right: 15px;
+  flex-direction: row;
+  align-items:center
+}
+
+.header-form .header-form-text{
+  height: 49px;
+  width: 350px;
+  border-radius: 55px 0px 0 55px;
+  border: 2px solid #c1b8b8;
+  border-right: 0;
+  margin-right: -25px;
+  outline: none;
+  text-indent: 20px;
+  font-size: 1.5rem;
+  transition: 0.5s ease
+}
+
+.header-form .header-form-text.active{
+  width: 350px;
+  transition: 0.5s ease
+}
 
 
 /* main */

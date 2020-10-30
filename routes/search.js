@@ -24,5 +24,3 @@ const {sumSalary, findSalary} = require('../logic/averageSalary');
 // 	console.log(uniqueSkills);
 //
 // });
-
-module.exports = router;
