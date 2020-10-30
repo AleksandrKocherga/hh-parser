@@ -3,8 +3,6 @@ const request = require('request');
 const mongoose = require('mongoose');
 const Vacancy = require('../models/Vacancy');
 
-mongoose.connect('mongodb://localhost/hui', {useNewUrlParser: true});
-
 const links = [];
 const array = [];
 

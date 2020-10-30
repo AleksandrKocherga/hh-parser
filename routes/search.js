@@ -1,9 +1,8 @@
-const router = require('express').Router();
-const Vacancy = require('../models/Vacancy.js');
+const router = require("express").Router();
+const Vacancy = require("../models/Vacancy.js");
 // const {parse} = require('../logic/parsePage');
-const findSkills = require('../logic/uniqueSkills');
-const {sumSalary, findSalary} = require('../logic/averageSalary');
-
+const findSkills = require("../logic/uniqueSkills");
+const { sumSalary, findSalary } = require("../logic/averageSalary");
 
 // получение скилов, среднюю ЗП и данные из базы
 
@@ -24,3 +23,5 @@ const {sumSalary, findSalary} = require('../logic/averageSalary');
 // 	console.log(uniqueSkills);
 //
 // });
+
+module.exports = router;

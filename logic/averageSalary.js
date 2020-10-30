@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Vacancy = require('../models/Vacancy');
 
-mongoose.connect('mongodb://localhost/hui', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost/hui', {useNewUrlParser: true});
 
 
 // курс валют
