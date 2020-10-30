@@ -7,7 +7,7 @@
 
     <div class="header-item">
       <div class="header-form">
-        <form action="/updateBase">
+        <form action="/updateBase" name="formAdmin" method="POST">
           <input type="text" name="adminText" class="header-form-text">
           <input type="submit" value="спарсить" name="adminBtn" class="btn">
         </form>
@@ -21,73 +21,38 @@
 
 <section class="container">
   <div class="search-main">
-    <form class="form-control" name="searchForm" method="GET" action="/search">
+    <form class="form-control" name="searchForm" method="POST" action="/search">
       <div class="input-main">
-        <input type="text" name="searchText" required />
+        <input type="text" name="searchText" class="input-main-text" required />
         <label>Поиск вакансий</label>
         <input type="submit" value="ИСКАТЬ" name="searchBtn" class="btn">
     </form>
   </div>
 </section>
 
-<section class="container" style="display: none;">
-  {{list}}
+<section>
   <div class="average">
     <div class="average-salary">
       <h2>Средняя зарплата</h2>
-      <div class="average-salary-inner"> 70 000 ₽</div>
+      <div class="average-salary-inner"></div>
     </div>
 
     <div class="average-stack">
       <h2 class="average-stack-title">Необходимые технологии</h2>
       <div class="average-stack-inner">
-        <span class="item">React</span>
-        <span class="item">Vue</span>
-        <span class="item">JS</span>
-        <span class="item">HTML</span>
-        <span class="item">CSS</span>
-        <span class="item">React</span>
-        <span class="item">Vue</span>
-        <span class="item">JS</span>
-        <span class="item">HTML</span>
-        <span class="item">CSS</span>
+
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="container" style="display: none;">
-  <div class="vacancy">
-    <div class="vacancy-item">
-      <div class="vacancy-item_img"><img src="https://hhcdn.ru/employer-logo/1427354.png"></div>
-      <div class="vacancy-item_block">
-        <div class="block-title">Frontend Разработчик (React / Node.js)</div>
-        <div class="block-company">Lincoln Labs </div>
-        <div class="block-stack">
-          <span class="item">React</span>
-          <span class="item">React</span>
-          <span class="item">React</span>
-          <span class="item">React</span>
-        </div>
-      </div>
-      <div class="block-salary">70 000 P</div>
+<section class="container">
+  <div id="loader">
+    <div class="cssload-thecube">
+      <div class="cssload-cube cssload-c1"></div>
+      <div class="cssload-cube cssload-c2"></div>
+      <div class="cssload-cube cssload-c4"></div>
+      <div class="cssload-cube cssload-c3"></div>
     </div>
-
-    <div class="vacancy-item">
-      <div class="vacancy-item_img"><img src="https://hhcdn.ru/employer-logo/1427354.png"></div>
-      <div class="vacancy-item_block">
-        <div class="block-title">Frontend Разработчик (React / Node.js)</div>
-        <div class="block-company">Lincoln Labs </div>
-        <div class="block-stack">
-          <span class="item">React</span>
-          <span class="item">React</span>
-          <span class="item">React</span>
-          <span class="item">React</span>
-        </div>
-      </div>
-      <div class="block-salary">70 000 P</div>
-    </div>
-
   </div>
-</section>

@@ -6,22 +6,30 @@ const { sumSalary, findSalary } = require("../logic/averageSalary");
 
 // получение скилов, среднюю ЗП и данные из базы
 
-// router.get('/', async (req, res) => {
-// 	const search = 'react';
-// 	// уникальные скилы
-// 	const uniqueSkills = await findSkills(search);
-//
-// 	// средняя ЗП
-// 	const preSum = await findSalary(search);
-// 	const sumSal = await sumSalary(preSum);
-//
-// 	// вакансии по поиску
-// 	const vacancy = await Vacancy.find({tag: search});
-//
-// 	// res.json({uniqueSkills, sumSal, vacancy});
-//
-// 	console.log(uniqueSkills);
-//
-// });
+router.post("/", async (req, res) => {
+  const search = req.body.text;
+
+  // уникальные скилы
+  const uniqueSkills = await findSkills(search);
+
+  // средняя ЗП
+  const preSum = await findSalary(search);
+  const sumSal = await sumSalary(preSum);
+
+  // вакансии по поиску
+  const vacancy = await Vacancy.find({ tag: search });
+  console.log(sumSal);
+
+  // res.render("404", {
+  //   layout: false,
+  //   // arrStack: [{ skill: "CSS" }, { skill: "JS" }, { skill: "Node.js" }],
+  //   zp: sumSal,
+  //   // uniqueSkills,
+  //   // sumSal,
+  //   // vacancy,
+  // });
+
+  res.json({ sumSal, uniqueSkills });
+});
 
 module.exports = router;
