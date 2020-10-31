@@ -12,10 +12,13 @@ module.exports = function (app) {
   const hbs = require("hbs")
 
 
-  mongoose.connect("mongodb://localhost:27017/HH", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  mongoose.connect(
+    "mongodb+srv://hhparser:q123456@hh-parser.expfj.mongodb.net/test",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  );
 
   hbs.registerPartials(path.join(__dirname, "..", "views/partials"));
   app.set("view engine", "hbs");
