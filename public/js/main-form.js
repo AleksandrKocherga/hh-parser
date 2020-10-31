@@ -35,7 +35,7 @@ formSearch.addEventListener("submit", async (event) => {
       console.log("Request succeeded with JSON response", data);
 
       let average = document.querySelector(".average-salary-inner");
-      average.innerHTML += data.sumSal;
+      average.innerHTML = data.sumSal;
       // data.uniqueSkills.forEach((item) => (document.body.innerHTML += item));
 
       let stack = document.querySelector(".average-stack-inner");
