@@ -6,13 +6,18 @@ module.exports = function (app) {
   const morgan = require("morgan");
   const mongoose = require("mongoose");
   const path = require("path");
+  const searchRoute = require("../routes/search.js");
+  const updateBaseRoute = require("../routes/updateBase");
   const registrationRoute = require("../routes/auth.js");
+  const hbs = require("hbs")
+
 
   mongoose.connect("mongodb://localhost:27017/HH", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
 
+  hbs.registerPartials(path.join(__dirname, "..", "views/partials"));
   app.set("view engine", "hbs");
   app.set("views", path.join(__dirname, "..", "views"));
   app.use(express.static(path.join(__dirname, "..", "public")));
@@ -39,4 +44,6 @@ module.exports = function (app) {
   );
 
   app.use("/", registrationRoute);
+  app.use("/search", searchRoute);
+  app.use("/updateBase", updateBaseRoute);
 };

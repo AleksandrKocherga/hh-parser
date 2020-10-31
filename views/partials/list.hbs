@@ -1,0 +1,67 @@
+<div class="average">
+  <div class="average-salary">
+    <h2>Средняя зарплата!!!!!</h2>
+    <div class="average-salary-inner">{{zp}}</div>
+  </div>
+
+  <div class="average-stack">
+    <h2 class="average-stack-title">Необходимые технологии</h2>
+    <div class="average-stack-inner">
+      <span class="item"></span>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<section class="container">
+  <div class="vacancy">
+    {{#each arrVacancy}}
+    <div class="vacancy-item">
+      <div class="vacancy-item_img"><img src="{{this.companyLogo}}"></div>
+      <div class="vacancy-item_block">
+        <div class="block-title">{{this.vacancyTitle}}</div>
+        <div class="block-company">{{companyName}} </div>
+        <div class="block-stack">
+          {{#each this.skills}}
+          <span class="item">{{this}}</span>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</section>
+
+{{!-- <div class="vacancy-item">
+      <div class="vacancy-item_img"><img src="https://hhcdn.ru/employer-logo/1427354.png"></div>
+      <div class="vacancy-item_block">
+
+        <div class="block-title">Frontend Разработчик (React / Node.js)</div>
+        <div class="block-company">Lincoln Labs </div>
+        <div class="block-stack">
+          <span class="item">React</span>
+          <span class="item">React</span>
+          <span class="item">React</span>
+          <span class="item">React</span>
+        </div>
+      </div>
+      <div class="block-salary">70 000 P</div>
+    </div>
+
+    <div class="vacancy-item">
+      <div class="vacancy-item_img"><img src="https://hhcdn.ru/employer-logo/1427354.png"></div>
+      <div class="vacancy-item_block">
+        <div class="block-title">Frontend Разработчик (React / Node.js)</div>
+        <div class="block-company">Lincoln Labs </div>
+        <div class="block-stack">
+          <span class="item">React</span>
+          <span class="item">React</span>
+          <span class="item">React</span>
+          <span class="item">React</span>
+        </div>
+      </div>
+      <div class="block-salary">70 000 P</div>
+    </div>
+
+  </div> --}}
